@@ -1,0 +1,148 @@
+@charset "UTF-8";
+/*
+|--------------------------------------------------------------------------
+| global
+| -------------------------------------------------------------------------
+|
+|--------------------------------------------------------------------------
+*/
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+  /* DEBUG CSS: background: rgb(182 216 250 / 0.06) !important; */
+}
+
+* {
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  /*
+  font-size: 62.5%;
+  overflow-y: scroll;
+   */
+  scrollbar-gutter: stable;
+  -moz-text-size-adjust: none;
+  -webkit-text-size-adjust: none;
+  text-size-adjust: none;
+}
+
+html,
+body {
+  height: 100%;
+}
+
+body {
+  scroll-behavior: smooth;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+
+  background-color: var(--white);
+}
+
+body > header,
+footer {
+  flex: none;
+}
+
+main {
+  display: flex;
+  flex: 1 0 auto;
+  flex-direction: column;
+}
+
+.container {
+  display: flow-root;
+  box-sizing: content-box;
+  margin: 0 auto;
+  max-width: 1280px;
+  width: 100%;
+  outline: none;
+}
+
+section {
+  display: flow-root;
+  box-sizing: border-box;
+  padding: 0;
+}
+
+article {
+  padding: 0 1rem;
+}
+
+article,
+aside {
+  display: flow-root;
+  background-color: white;
+  flex: 1 1 100%;
+}
+
+@media only screen and (min-width: 48em) {
+
+  article {
+      flex: 1 1 800px;
+  }
+  aside {
+      flex: 1 1 400px;
+  }
+}
+
+.content {
+  display: flex;
+  flex: 1 1 100%;
+  flex-direction: column;
+  justify-content: center;
+  align-items: stretch;
+  gap: 1rem;
+
+  outline: #02c77f solid 1px;
+}
+
+@media only screen and (min-width: 48em) {
+
+  /* 768px = 48em */
+  .content {
+      flex-direction: row;
+      gap: 2rem;
+  }
+}
+
+@media (min-width: 75em) {  /* 1200px = 75em  */
+
+  .content {
+      flex-direction: row;
+      gap: 3rem;
+  }
+}
+
+footer {
+  min-height: 200px;
+  background-color: #333333;
+  color: white;
+}
+
+.flex-container {
+  /* We first create a flex layout context */
+  display: flex;
+  /* Then we define the flow direction
+     and if we allow the items to wrap
+   * Remember this is the same as:
+   * flex-direction: row;
+   * flex-wrap: wrap;
+   */
+  flex-flow: row wrap;
+  /* Then we define how is distributed the remaining space */
+  justify-content: space-around;
+
+}
+
+
+hr {
+  border: 0;
+  border-top: 0.1rem solid var(--border-color);
+  margin: 2.0rem 0;
+}

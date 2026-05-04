@@ -1,0 +1,116 @@
+@charset "UTF-8";
+/*
+|--------------------------------------------------------------------------
+| https://github.com/kevin-powell/fem-manage-landing-page-part-6/blob/master/style.css
+| https://github.com/philipwalton/solved-by-flexbox/blob/master/assets/css/base/elements.css
+| https://dev.to/danywalls/how-to-use-hsl-and-calc-functions-in-css-for-creating-darken-and-light-colors-3kbn
+| https://htmlcolors.com/hex-to-hsl
+| https://debroome.com/best-practices-how-to-write-company-brand-guidelines-colors/
+| https://noeldelgado.github.io/shadowlord/
+|
+| Best practices colors: (60-30-10 Rule)
+| - Primary colors: (60%)
+| - Secondary colors: (30%)
+| - Tertiary color: (10%)
+|
+| Variable currentcolor is the same color as font-color was set to earlier!
+| Currently, only four elements will tint via the accent-color property: checkbox, radio, range and progress.
+|--------------------------------------------------------------------------
+*/
+:root {
+    /** error alert **/
+    --color-error-text: #aa0808;
+    --color-error-bg: #fef4f6;
+    --color-error-border: #e47f89;
+
+    /** info alert **/
+    --color-info-text: #004085;
+    --color-info-bg: #dbecfe;
+    --color-info-border: #0f7ae5;
+    --color-ligh-blue-border: #72aee6;
+
+    /** success alert **/
+    --color-success-text: #12845a;
+    --color-success-bg: #e8fcf5;
+    --color-success-border: #02c77f;
+
+
+    --white: #ffffff;
+    --gray-01: #f8f8f8; /* search-field-background, gray button background, background */
+    --gray-02: #f2f2f2; /* background-gray-buttons,  */
+    --gray-03: #eeeeee;
+    --gray-04: #cccccc;
+    --gray-05: #acacac; /* placeholder-text */
+    --gray-06: #6b6b6b;
+    --gray-07: #5a5d64;
+    --gray-08: #3d3d3d; /* light-gray-small-icons */
+    --gray-09: #2b2c30; /* text color */
+    --gray-10: #242424; /* heading color */
+
+
+    --a1-text-color: #222222;
+    --a2-text-color: #333333;
+    /* background-color: #f8f8f8; */
+    --border-color-gray: #e5e5e5;
+
+    background-color: rgba(255, 255, 255, 0.1);
+    border-color: rgba(255, 255, 255, 0.2);
+
+
+    /** primary colors **/
+    --color-primary: #e57373;
+    --color-primary-hover: #db5a5a;
+
+
+    --color-secondary: #3575d3;
+    --color-secondary-hover: #1c5ebf;
+
+    /** border defaults **/
+    --light-gray-background: var(--gray-01);
+    --border-color: #e5e5e5;
+
+    --max-text-width: 66ch;
+    --gap: 2rem;
+    --max-width: 1280px;
+    --min-width: 360px;
+
+    --ff-icons: 'Font Awesome 6 Free';
+
+}
+/** font-sizes: (default: 16px)
+50%     = 0.5rem    = 8px
+62.5%   = 0.625rem  = 10px
+75%     = 0.75rem   = 12px
+87.5%   = 0.875rem  = 14px
+100%    = 1.0rem    = 16px  **/
+
+/** breaking points:
+360px (absolute smallest size),
+576px = 36em,
+640px = 40em,
+768px = 48em,
+1024px = 64em
+1200px = 75em,
+1280px = 80em,
+1400px = 87.5em,
+1440px = 90em
+*/
+/* https://gs.statcounter.com/screen-resolution-stats/mobile/worldwide */
+/** TXXX
+--verydarkgray: #2b2c30;
+--dark-gray: #5a5d64;
+--dark-gray-text: #262632;
+--light-gray-border: #eeeeee;
+
+RED BUTTON
+--red button: #e45257;
+--red button hover: #e13c42;
+white text
+white text hover
+
+GRAY BUTTON
+gray button: #f8f8f8;
+gray button hover: #eeeeee;
+darker gray text
+red button text at hover
+*/
