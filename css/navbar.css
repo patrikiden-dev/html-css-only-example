@@ -18,8 +18,8 @@
 }
 
 .nav-toggle-label i.fa-solid {
-
   /* Hamburger icon   */
+
   font-size: 125%;
   cursor: pointer;
   color: var(--gray-07);
@@ -59,7 +59,6 @@ nav {
   top: 100%;
   left: 0;
   width: 100%;
-
   transform: scale(1, 0);
   transform-origin: top;
   transition: transform 400ms ease-in-out;
@@ -110,7 +109,7 @@ nav a:active {
 }
 
 nav a.active {
-  background-color: var(--white);
+  background-color: white;
   color: var(--color-primary);
 }
 
